@@ -595,7 +595,7 @@ textarea {
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0 !important;
-        min-height: 10em;
+        height: 14em;
         border: 1px solid #c0c0c0;
         position: relative;
         overflow: hidden;
