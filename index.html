@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="css/foundation.min.css">
         <link rel="stylesheet" href="css/main.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/sendMail.min.js"></script>
+        <script src="js/jquery.cookie.min.js"></script>
     </head>
     <body  id="up">
         <header id="header" class="header">
@@ -160,22 +163,23 @@
 			<div id="map"></div>
 				<div class="contact-form">
 					<span>¿Tienes dudas? contactanos</span>.
-					<form method="get" accept-charset="utf-8">
-						<input type="text" name="Nombre" value="" placeholder="Dejanos tu nombre">
-						<input type="email" name="Correo" value="" placeholder="Aqui escribenos tu correo">
-						<input type="text" name="Asunto" value="" placeholder="Asunto">
-						<textarea name="Escribenos" rows="3"placeholder="Escribenos lo que gustes"></textarea>
-						<input type="submit" name="" value="Enviar">
+					<form accept-charset="utf-8">
+						<span id="missing" class="hidden"> Faltan campos por llenar </span>
+						<input type="text" required name="Nombre" id="name" value="" placeholder="Dejanos tu nombre">
+						<input type="email" required name="Correo" id="mail" value="" placeholder="Aqui escribenos tu correo">
+						<input type="text" required name="Asunto" id="subject" value="" placeholder="Asunto">
+						<textarea name="Escribenos" id="text" rows="3" placeholder="Escribenos lo que gustes"></textarea>
+						<input type="submit" name="send" id="send" value="Enviar">
+						<div class="loading hidden"></div>
 					</form>
 				</div>
 			</section>
 		</section>
 			
 		</main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/plugins.min.js"></script>
         <script src="js/main.min.js"></script>
-        <script src="js/particles.min.js"></script><script src="../particles.js"></script>
+        <script src="js/particles.min.js"></script>
 		<script src="js/app.min.js"></script>
 
 		<!-- stats.js -->
